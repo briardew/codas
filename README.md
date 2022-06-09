@@ -33,4 +33,14 @@ The environment variable $NOBACKUP is pre-defined on Discover to point to your n
     ```
     setenv EXPID codas001
     ```
+5. Run the CoDAS setup command:
+    ```
+    cd $GEOSDIR/GEOSagcm/src/Applications/GEOSgcm_App
+    ./codas_setup --clone $CLONEDIR --root $EXPROOT --expid $EXPID --nocvs
+    ```
 
+Notes: This can have issues if ```$CLONEDIR``` points to a symbolic link instead of the actual directory,
+or if ```$CLONEDIR`` is not the same run directory referenced in the gcm_run.j script. Still looking into this.
+
+The codas_setup utility places several hidden files in your home directory. This will hopefully be fixed,
+but, in the meantime, you can change the GID by editing ~/.GROUProot.
