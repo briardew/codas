@@ -16,6 +16,7 @@ The environment variable $NOBACKUP is pre-defined on Discover to point to your n
     ```
     setenv GEOSDIR /discover/nobackup/bweir/GEOS/bw_Icarus-3_2_p9_MEM_20-SLES12
     ```
+    
     For carbon experiments, you can use
     ```
     setenv GEOSDIR /discover/nobackup/bweir/GEOS/bw_Heracles-5_4_p3_SLES12
