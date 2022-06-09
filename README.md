@@ -111,7 +111,7 @@ To add a new dataset, you’ll need to add entries in `obsys.rc`, `tgasinfo`, `g
 CoDAS uses the xtralite data format to generalize handling trace gas remote sensing retrievals. These retrievals can be expressed on vertical pressure or altitude grids interpreted as point values or averaging kernel retrievals (see the key below). You can find documentation, skeleton files, and translation utilities for xtralite files at [link here].
 
 | Abbrev | Data type |
-| ------ | --------- |
+| :----- | :-------- |
 | tgav   | Averaging kernel on a pressure grid |
 | tgaz   | Averaging kernel on an altitude grid |
 | tgez   | Sample observation on an altitude grid |
