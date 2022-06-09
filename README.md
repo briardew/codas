@@ -90,7 +90,7 @@ The background and observation error parameters are set at nominal values to sta
 You can replace the call to the `GSIsa.x` executable with a call to the `GSIsa.dbg.x` executable to turn on debugging (this is a separate compilation that I try to keep up to date, but may not be). This will output a bunch of diagnostic information and only process the first three observations of each observation stream.
 
 | File                       | Description |
-| -------------------------- | ----------- |
+| :------------------------- | :---------- |
 | `GSIsa.x`                  | GSI executable |
 | `GSIdbg.x`                 | Debugging GSI executable |
 | `codas_run.j`              | CoDAS run script |
