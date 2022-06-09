@@ -10,11 +10,11 @@ The environment variable $NOBACKUP is pre-defined on Discover to point to your n
 
 1. Define your GEOS directory (```$GEOSDIR```). If you checked out and compiled the model following the instructions below, you can skip this step. Otherwise, for StratChem experiments, you can use
     ```
-        setenv GEOSDIR /discover/nobackup/bweir/GEOS/bw_Icarus-3_2_p9_MEM_20-SLES12
+    setenv GEOSDIR /discover/nobackup/bweir/GEOS/bw_Icarus-3_2_p9_MEM_20-SLES12
     ```
-For carbon experiments, you can use
-
+    For carbon experiments, you can use
     ```
-        setenv GEOSDIR /discover/nobackup/bweir/GEOS/bw_Heracles-5_4_p3_SLES12
+    setenv GEOSDIR /discover/nobackup/bweir/GEOS/bw_Heracles-5_4_p3_SLES12
     ```
-or any other existing code directory you have (must have the appropriate CoDAS hooks for applying increments).
+    or any other existing code directory you have (must have the appropriate CoDAS hooks for applying increments).
+2. Define the **reference**
