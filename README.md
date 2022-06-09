@@ -62,7 +62,6 @@ but, in the meantime, you can change the GID by editing the ```~/.GROUProot``` f
     ```
     You should have restart files with only underscores, e.g., ```gocart_internal_rst```, and a ```cap_restart```
     file that is 20090827 210000, corresponding to our restart time.
-
     These restarts may have a ```codas_background_rst``` file that is used to remember the background files at the beginning of the analysis window needed by the GSI. These files often don’t copy well from one experiment to another. If you’re having problems, deleting the ```codas_background_rst``` file and restarting is usually a good test.
 3. Run CoDAS:
     ```
