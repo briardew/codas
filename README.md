@@ -167,7 +167,7 @@ repository instead of the newer GitHub repositories.
 
 You can download and compile the GCM anywhere, but here we’ll put it in the
 directory `$GEOSDIR`, which we’ll come back to in the next section. Recall from
-before that we defined the $GCMTAG and $GEOSDIR environment variables. For
+before that we defined the `$GCMTAG` and `$GEOSDIR` environment variables. For
 example, for StratChem experiments,
 ```
 setenv GCMTAG bw_Icarus-3_2_p9_MEM_20-SLES12
