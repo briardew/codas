@@ -126,7 +126,7 @@ observation stream.
 | File                       | Description |
 | :------------------------- | :---------- |
 | `GSIsa.x`                  | GSI executable |
-| `GSIdbg.x`                 | Debugging GSI executable |
+| `GSIsa.dbg.x`              | Debugging GSI executable |
 | `codas_run.j`              | CoDAS run script |
 | `analyze`                  | Directory for CoDAS settings and utilities |
 | `analyze/codas.rc`         | Main CoDAS configuration file: species, chemistry component, background error covariance |
