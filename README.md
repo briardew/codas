@@ -9,7 +9,7 @@ the CoDAS setup utility, a ship in a bottle, protractor, and a picture of Edith
 Piaf.
 
 ## Setting up a CoDAS run/experiment directory
-The environment variable $NOBACKUP is pre-defined on Discover to point to your
+The environment variable `$NOBACKUP` is pre-defined on Discover to point to your
 nobackup directory.
 
 1. Define your GEOS directory (`$GEOSDIR`). If you checked out and compiled the
