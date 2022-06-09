@@ -17,4 +17,11 @@ The environment variable $NOBACKUP is pre-defined on Discover to point to your n
     setenv GEOSDIR /discover/nobackup/bweir/GEOS/bw_Heracles-5_4_p3_SLES12
     ```
     or any other existing code directory you have (must have the appropriate CoDAS hooks for applying increments).
-2. Define the **reference**
+2. Define the **reference** run directory (```$CLONEDIR```). Your run will be a clone of the run in this directory. For example, for StratChem experiments, use
+    ```
+    setenv CLONEDIR /discover/nobackup/bweir/GEOS/runs/sage_ana
+    ```
+    or for carbon experiments, use
+    ```
+    setenv CLONEDIR /discover/nobackup/bweir/GEOS/runs/m2cc-v1_ana
+    ```
