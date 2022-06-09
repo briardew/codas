@@ -85,7 +85,7 @@ The basic configuration of CoDAS is laid out in `analyze/codas.rc`, which define
 
 Most of the files in `analyze/etc` are either unused and needed by the GSI, or generated automatically by the CoDAS utilities and have an extension `.tmpl`. You can change the datasets assimilated by editing the `gsiparm.anl` file. Tuning parameters for the observation errors are defined in the `tgasinfo` file, which must have a line corresponding to every level of every observation system defined in `gsiparm.anl`.
 
-The background and observation error parameters are set at nominal values to start. In science-grade products, these numbers are typically tuned based on a posteriori statistics, viz., the Desroziers et al. (2005; [doi:10.1256/qj.05.108](https://doi.org/10.1256/qj.05.108)) diagnostics and comparisons to (mostly) independent data. Tuning these parameters is the engineering side of data assimilation and plays a significant role in the scientific/policy/etc. relevance of the final product. Future work could include testing the three-cornered hat method that the atmospheric group likes.
+The background and observation error parameters are set at nominal values to start. In science-grade products, these numbers are typically tuned based on a posteriori statistics, viz., the Desroziers et al. (2005; doi:[10.1256/qj.05.108](https://doi.org/10.1256/qj.05.108)) diagnostics and comparisons to (mostly) independent data. Tuning these parameters is the engineering side of data assimilation and plays a significant role in the scientific/policy/etc. relevance of the final product. Future work could include testing the three-cornered hat method that the atmospheric group likes.
 
 You can replace the call to the `GSIsa.x` executable with a call to the `GSIsa.dbg.x` executable to turn on debugging (this is a separate compilation that I try to keep up to date, but may not be). This will output a bunch of diagnostic information and only process the first three observations of each observation stream.
 
@@ -98,8 +98,8 @@ You can replace the call to the `GSIsa.x` executable with a call to the `GSIsa.d
 | `analyze/codas.rc`         | Main CoDAS configuration file: species, chemistry component, background error covariance |
 | `analyze/ana2inc.x`        | Subtracts background from analysis to compute increment |
 | `analyze/codas_acqobs.j`   | Template job for acquiring obs |
-| `analyze/codas_setup1.csh` | Does the first part of generating the RC files |
-| `analyze/codas_setup2.csh` | Does the second part of generating the RC files |
+| `analyze/codas_setup1.csh` | Does the first part of generating the etc files |
+| `analyze/codas_setup2.csh` | Does the second part of generating the etc files |
 | `analyze/etc/obsys.rc`     | Tells codas_acqobs.j where to find obs |
 | `analyze/etc/tgasinfo`     | Additional observational settings for GSI: obs error inflation, bias, gross check |
 | `analyze/etc/gsiparm.anl`  | Additional observational settings for GSI: obs type (e.g., tgav, tgaz, tgez, tgev) |
@@ -121,25 +121,29 @@ CoDAS uses the xtralite data format to generalize handling trace gas remote sens
 If you wish to modify the CoDAS code, you’ll need to download (check out) and compile a given version (tag) of the GSI and optionally a separate GCM. **You’ll only need to do this once**. If you’ve never used git/CVS before, you’ll need to follow the steps in the GEOS Quick Start Guide (follow this link for Heracles 5.4). The directions below should work, but use an outdated CVS repository instead of the newer GitHub repositories.
 
 You can download and compile the GCM anywhere, but here we’ll put it in the directory `$GEOSDIR`, which we’ll come back to in the next section. Recall from before that we defined the $GCMTAG and $GEOSDIR environment variables. For example, for StratChem experiments,
-setenv GCMTAG bw_Icarus-3_2_p9_MEM_20-SLES12
-setenv GEOSDIR $NOBACKUP/GEOS/$GCMTAG
+    ```
+    setenv GCMTAG bw_Icarus-3_2_p9_MEM_20-SLES12
+    setenv GEOSDIR $NOBACKUP/GEOS/$GCMTAG
+    ```
 For carbon experiments, do the same, but with
-setenv GCMTAG bw_Heracles-5_4_p3_SLES12
-setenv GEOSDIR $NOBACKUP/GEOS/$GCMTAG
+    ```
+    setenv GCMTAG bw_Heracles-5_4_p3_SLES12
+    setenv GEOSDIR $NOBACKUP/GEOS/$GCMTAG
+    ```
 Then run
-mkdir -p $GEOSDIR
-cd $GEOSDIR
-cvs co -r $GCMTAG GEOSagcm
-cd GEOSagcm/src
-./parallel_build.csh
+    ```
+    mkdir -p $GEOSDIR
+    cd $GEOSDIR
+    cvs co -r $GCMTAG GEOSagcm
+    cd GEOSagcm/src
+    ./parallel_build.csh
+    ```
 
-Any questions?
+# Any questions?
 
 Future improvements
-Auto-generate gsidiags.rc (should be “easy”)
-Auto-generate gsiparm.anl (“medium”?)
-Convert run script to Python (cf. other efforts)
-Convert codas.rc to YAML
-Generalize codas.rc to auto-generate remainder of RC files
-
-
+* Auto-generate `gsidiags.rc` (should be “easy”)
+* Auto-generate `gsiparm.anl` (“medium”?)
+* Convert run script to Python (cf. other efforts)?
+* Convert `codas.rc` to YAML?
+* Generalize `codas.rc` to auto-generate remainder of etc files
