@@ -8,11 +8,12 @@ This document covers the basics of downloading, compiling, running, and analyzin
 ## Setting up a CoDAS run/experiment directory
 The environment variable $NOBACKUP is pre-defined on Discover to point to your nobackup directory.
 
-1. Define your GEOS directory (```$GEOSDIR```). If you checked out and compiled the model following the instructions below, you can skip this step. Otherwise, for StratChem experiments, you can use the build in
+1. Define your GEOS directory (```$GEOSDIR```). If you checked out and compiled the model following the instructions below, you can skip this step. Otherwise, for StratChem experiments, you can use
     ```
         setenv GEOSDIR /discover/nobackup/bweir/GEOS/bw_Icarus-3_2_p9_MEM_20-SLES12
     ```
-For carbon experiments, you can use the build in
+For carbon experiments, you can use
+
     ```
         setenv GEOSDIR /discover/nobackup/bweir/GEOS/bw_Heracles-5_4_p3_SLES12
     ```
