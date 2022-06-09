@@ -25,3 +25,12 @@ The environment variable $NOBACKUP is pre-defined on Discover to point to your n
     ```
     setenv CLONEDIR /discover/nobackup/bweir/GEOS/runs/m2cc-v1_ana
     ```
+3. Define your personal run root directory (```$EXPROOT``). This can be any writable directory, e.g.,
+    ```
+    setenv EXPROOT $NOBACKUP/GEOS/runs
+    ```
+4. Define your experiment (```$EXPID```). This can be anything, e.g.,
+    ```
+    setenv EXPID codas001
+    ```
+
