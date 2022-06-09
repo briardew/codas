@@ -121,23 +121,23 @@ CoDAS uses the xtralite data format to generalize handling trace gas remote sens
 If you wish to modify the CoDAS code, you’ll need to download (check out) and compile a given version (tag) of the GSI and optionally a separate GCM. **You’ll only need to do this once**. If you’ve never used git/CVS before, you’ll need to follow the steps in the GEOS Quick Start Guide (follow this link for Heracles 5.4). The directions below should work, but use an outdated CVS repository instead of the newer GitHub repositories.
 
 You can download and compile the GCM anywhere, but here we’ll put it in the directory `$GEOSDIR`, which we’ll come back to in the next section. Recall from before that we defined the $GCMTAG and $GEOSDIR environment variables. For example, for StratChem experiments,
-    ```
-    setenv GCMTAG bw_Icarus-3_2_p9_MEM_20-SLES12
-    setenv GEOSDIR $NOBACKUP/GEOS/$GCMTAG
-    ```
+```
+setenv GCMTAG bw_Icarus-3_2_p9_MEM_20-SLES12
+setenv GEOSDIR $NOBACKUP/GEOS/$GCMTAG
+```
 For carbon experiments, do the same, but with
-    ```
-    setenv GCMTAG bw_Heracles-5_4_p3_SLES12
-    setenv GEOSDIR $NOBACKUP/GEOS/$GCMTAG
-    ```
+```
+setenv GCMTAG bw_Heracles-5_4_p3_SLES12
+setenv GEOSDIR $NOBACKUP/GEOS/$GCMTAG
+```
 Then run
-    ```
-    mkdir -p $GEOSDIR
-    cd $GEOSDIR
-    cvs co -r $GCMTAG GEOSagcm
-    cd GEOSagcm/src
-    ./parallel_build.csh
-    ```
+```
+mkdir -p $GEOSDIR
+cd $GEOSDIR
+cvs co -r $GCMTAG GEOSagcm
+cd GEOSagcm/src
+./parallel_build.csh
+```
 
 # Any questions?
 
