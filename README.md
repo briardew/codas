@@ -101,6 +101,45 @@ You can replace the call to the `GSIsa.x` executable with a call to the `GSIsa.d
 | `analyze/codas_setup1.csh` | Does the first part of generating the RC files |
 | `analyze/codas_setup2.csh` | Does the second part of generating the RC files |
 | `analyze/etc/obsys.rc`     | Tells codas_acqobs.j where to find obs |
-| `analyze/etc/tgasinfo`     | Additional observational settings for GSI: obs error inflation, bias, gross check. |
+| `analyze/etc/tgasinfo`     | Additional observational settings for GSI: obs error inflation, bias, gross check |
+| `analyze/etc/gsiparm.anl`  | Additional observational settings for GSI: obs type (e.g., tgav, tgaz, tgez, tgev) |
+| `analyze/etc/gsidiags.rc`  | Additional observational settings for GSI (should be able to auto-generate) |
+
+## Adding new observations
+To add a new dataset, you’ll need to add entries in `obsys.rc`, `tgasinfo`, `gsiparm.anl`, and `gsidiags.rc`. The easiest approach is to use existing entries as a guide.
+
+CoDAS uses the xtralite data format to generalize handling trace gas remote sensing retrievals. These retrievals can be expressed on vertical pressure or altitude grids interpreted as point values or averaging kernel retrievals (see the key below). You can find documentation, skeleton files, and translation utilities for xtralite files at [link here].
+
+| Abbrev | Data type |
+| ------ | --------- |
+| tgav   | Averaging kernel on a pressure grid |
+| tgaz   | Averaging kernel on an altitude grid |
+| tgez   | Sample observation on an altitude grid |
+| tgev   | Sample observation on a pressure grid |
+
+## Downloading and compiling CoDAS (optional)
+If you wish to modify the CoDAS code, you’ll need to download (check out) and compile a given version (tag) of the GSI and optionally a separate GCM. **You’ll only need to do this once**. If you’ve never used git/CVS before, you’ll need to follow the steps in the GEOS Quick Start Guide (follow this link for Heracles 5.4). The directions below should work, but use an outdated CVS repository instead of the newer GitHub repositories.
+
+You can download and compile the GCM anywhere, but here we’ll put it in the directory `$GEOSDIR`, which we’ll come back to in the next section. Recall from before that we defined the $GCMTAG and $GEOSDIR environment variables. For example, for StratChem experiments,
+setenv GCMTAG bw_Icarus-3_2_p9_MEM_20-SLES12
+setenv GEOSDIR $NOBACKUP/GEOS/$GCMTAG
+For carbon experiments, do the same, but with
+setenv GCMTAG bw_Heracles-5_4_p3_SLES12
+setenv GEOSDIR $NOBACKUP/GEOS/$GCMTAG
+Then run
+mkdir -p $GEOSDIR
+cd $GEOSDIR
+cvs co -r $GCMTAG GEOSagcm
+cd GEOSagcm/src
+./parallel_build.csh
+
+Any questions?
+
+Future improvements
+Auto-generate gsidiags.rc (should be “easy”)
+Auto-generate gsiparm.anl (“medium”?)
+Convert run script to Python (cf. other efforts)
+Convert codas.rc to YAML
+Generalize codas.rc to auto-generate remainder of RC files
 
 
