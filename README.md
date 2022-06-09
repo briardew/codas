@@ -73,3 +73,10 @@ but, in the meantime, you can change the GID by editing the ```~/.GROUProot``` f
     sbatch ./codas_run.j
     ```
     It’s good practice to check the group ID in the run script because the ```codas_setup``` utility simply copies what’s in the ```~/.GROUProot``` file.
+
+## Configuring CoDAS
+The only difference between a CoDAS run directory and a GCM run directory is the ```codas_run.j``` job script, the ```GSIsa.x``` executable, and a directory ```analyze``` containing configuration files and utilities.
+
+The basic configuration of CoDAS is laid out in ```analyze/codas.rc```, which defines the gasses analyzed, the GEOS chemistry components that provide them (and receive the analysis increment), and various tuning parameters for the background errors.
+
+Most of the files in ```analyze/etc``` are either unused and needed by the GSI, or generated automatically by the CoDAS utilities and have an extension ```.tmpl```. You can change the datasets assimilated by editing the ```gsiparm.anl``` file. Tuning parameters for the observation errors are defined in the ```tgasinfo``` file, which must have a line corresponding to every level of every observation system defined in ```gsiparm.anl```.
