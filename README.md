@@ -21,7 +21,6 @@ The environment variable $NOBACKUP is pre-defined on Discover to point to your n
     setenv GEOSDIR /discover/nobackup/bweir/GEOS/bw_Heracles-5_4_p3_SLES12
     ```
     or any other existing code directory you have (must have the appropriate CoDAS hooks for applying increments).
-
 2. Define the **reference** run directory (```$CLONEDIR```). Your run will be a clone of the
     run in this directory. For example, for StratChem experiments, use
     ```
@@ -31,17 +30,14 @@ The environment variable $NOBACKUP is pre-defined on Discover to point to your n
     ```
     setenv CLONEDIR /discover/nobackup/bweir/GEOS/runs/m2cc-v1_ana
     ```
-
 3. Define your personal run root directory (```$EXPROOT```). This can be any writable directory, e.g.,
     ```
     setenv EXPROOT $NOBACKUP/GEOS/runs
     ```
-
 4. Define your experiment (```$EXPID```). This can be anything, e.g.,
     ```
     setenv EXPID codas001
     ```
-
 5. Run the CoDAS setup command:
     ```
     cd $GEOSDIR/GEOSagcm/src/Applications/GEOSgcm_App
@@ -59,7 +55,6 @@ but, in the meantime, you can change the GID by editing the ```~/.GROUProot``` f
     ```
     cd $EXPROOT/$EXPID
     ```
-
 2. Copy restarts into your run directory. For example
     ```
     tar xf /archive/u/bweir/GEOS5.0/m2cc-v1_tags/restarts/Y2009/restarts.e20090827_21z.tar
@@ -69,7 +64,6 @@ but, in the meantime, you can change the GID by editing the ```~/.GROUProot``` f
     file that is 20090827 210000, corresponding to our restart time.
 
     These restarts may have a ```codas_background_rst``` file that is used to remember the background files at the beginning of the analysis window needed by the GSI. These files often don’t copy well from one experiment to another. If you’re having problems, deleting the ```codas_background_rst``` file and restarting is usually a good test.
-
 3. Run CoDAS:
     ```
     sbatch ./codas_run.j
