@@ -112,11 +112,9 @@ system defined in `gsiparm.anl`.
 The background and observation error parameters are set at nominal values to
 start. In science-grade products, these numbers are typically tuned based on a
 posteriori statistics, viz., the Desroziers et al. (2005;
-doi:[10.1256/qj.05.108](https://doi.org/10.1256/qj.05.108)) diagnostics and
-comparisons to (mostly) independent data. Tuning these parameters is the
-engineering side of data assimilation and plays a significant role in the
-scientific/policy/etc. relevance of the final product. Future work could
-include testing the three-cornered hat method that the atmospheric group likes.
+doi:[10.1256/qj.05.108](https://doi.org/10.1256/qj.05.108)) diagnostics,
+three-cornered hat method (need link), and comparisons to (mostly) independent
+data.
 
 You can replace the call to the `GSIsa.x` executable with a call to the
 `GSIsa.dbg.x` executable to turn on debugging (this is a separate compilation
