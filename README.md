@@ -5,8 +5,7 @@ Goddard Earth Observing System (GEOS) on the NASA Center for Climate Simulation
 (NCCS) Discover supercomputer. You’ll need executables for the GEOS General
 Circulation Model (GCM) and Gridpoint Statistical Interpolation (GSI), usually
 compilable from a GEOS Atmospheric Data Assimilation (ADAS) tag [link here],
-the CoDAS setup utility, a ship in a bottle, protractor, and a picture of Edith
-Piaf.
+a ship in a bottle, protractor, and a picture of Edith Piaf.
 
 ## Setting up a CoDAS run/experiment directory
 The environment variable `$NOBACKUP` is pre-defined on Discover to point to your
