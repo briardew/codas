@@ -145,11 +145,12 @@ To add a new dataset, you’ll need to add entries in `obsys.rc`, `tgasinfo`,
 `gsiparm.anl`, and `gsidiags.rc`. The easiest approach is to use existing
 entries as a guide.
 
-CoDAS uses the xtralite data format to generalize handling trace gas remote
-sensing retrievals. These retrievals can be expressed on vertical pressure or
-altitude grids interpreted as point values or averaging kernel retrievals (see
-the key below). You can find documentation, skeleton files, and translation
-utilities for xtralite files at [link here].
+CoDAS uses four generic formats for constituent data: tgav, tgaz, tgez, and
+tgev (see table below). These retrievals can be expressed on vertical pressure or
+altitude grids interpreted as point values or averaging kernel retrievals.
+Very many constituent retrieval dataset can be
+transformed into these formats with the xtralite utilitiy
+([available here](https://github.com/briardew/xtralite)).
 
 | Abbrev | Data type |
 | :----- | :-------- |
@@ -159,6 +160,8 @@ utilities for xtralite files at [link here].
 | tgev   | Sample observation on a pressure grid |
 
 ## Downloading and compiling CoDAS (optional)
+**This is outdated, keeping here as a reminder to update to git.**
+
 If you wish to modify the CoDAS code, you’ll need to download (check out) and
 compile a given version (tag) of the GSI and optionally a separate GCM.
 **You’ll only need to do this once**. If you’ve never used git/CVS before,
