@@ -3,8 +3,10 @@ This document covers the basics of downloading, compiling, running, and
 analyzing results from the Constituent Data Assimilation (CoDAS) applied to the
 Goddard Earth Observing System (GEOS) on the NASA Center for Climate Simulation
 (NCCS) Discover supercomputer. You’ll need executables for the GEOS General
-Circulation Model (GCM) and Gridpoint Statistical Interpolation (GSI), usually
-compilable from a GEOS Atmospheric Data Assimilation (ADAS) tag [link here],
+Circulation Model (GCM) and Gridpoint Statistical Interpolation (GSI), which
+are provided for NCCS here, but can be compiled from the GEOS Atmospheric Data
+Assimilation (ADAS) fixture
+([available here](https://github.com/GEOS-ESM/GEOSadas)),
 a ship in a bottle, protractor, and a picture of Edith Piaf.
 
 ## Setting up a CoDAS run/experiment directory
