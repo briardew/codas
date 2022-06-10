@@ -124,6 +124,7 @@ observation stream.
 
 | File                       | Description |
 | :------------------------- | :---------- |
+| `GEOSgcm.x`                | GEOS executable |
 | `GSIsa.x`                  | GSI executable |
 | `GSIsa.dbg.x`              | Debugging GSI executable |
 | `codas_run.j`              | CoDAS run script |
@@ -145,9 +146,9 @@ entries as a guide.
 
 CoDAS uses four generic formats for constituent data: tgav, tgaz, tgez, and
 tgev (see table below). These retrievals can be expressed on vertical pressure or
-altitude grids interpreted as point values or averaging kernel retrievals.
-Very many constituent retrieval dataset can be
-transformed into these formats with the xtralite utilitiy
+altitude grids and interpreted as point values or averaging kernel retrievals.
+Very many constituent retrievals can be downloaded and transformed into these
+formats with the xtralite utilitiy
 ([available here](https://github.com/briardew/xtralite)).
 
 | Abbrev | Data type |
