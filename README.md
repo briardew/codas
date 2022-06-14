@@ -158,9 +158,7 @@ formats with the xtralite utilitiy
 
 ### Averaging kernels
 They are important. Let's give $y^m$ this a try:
-$$
-y^m = y^a + A(x^m - x^a)
-$$
+$$y^m = y^a + A(x^m - x^a)$$
 
 ### Adding new observations
 To add a new dataset, you’ll need to add entries in `obsys.rc`, `tgasinfo`,
