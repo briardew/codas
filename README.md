@@ -157,7 +157,7 @@ formats with the xtralite utilitiy
 ([available here](https://github.com/briardew/xtralite)).
 
 ### Averaging kernels
-They are important. Let's give this a try:
+They are important. Let's give $y^m$ this a try:
 $$
 y^m = y^a + A(x^m - x^a)
 $$
