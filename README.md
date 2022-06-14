@@ -139,17 +139,11 @@ observation stream.
 | `analyze/etc/gsiparm.anl`  | Additional observational settings for GSI: obs type (e.g., tgav, tgaz, tgez, tgev) |
 | `analyze/etc/gsidiags.rc`  | Additional observational settings for GSI (should be able to auto-generate) |
 
-## Adding new observations
-To add a new dataset, you’ll need to add entries in `obsys.rc`, `tgasinfo`,
-`gsiparm.anl`, and `gsidiags.rc`. The easiest approach is to use existing
-entries as a guide.
-
-CoDAS uses four generic formats for constituent data: tgav, tgaz, tgez, and
-tgev (see table below). These retrievals can be expressed on vertical pressure or
-altitude grids and interpreted as point values or averaging kernel retrievals.
-Very many constituent retrievals can be downloaded and transformed into these
-formats with the xtralite utilitiy
-([available here](https://github.com/briardew/xtralite)).
+## Data types
+CoDAS, with some exceptions, processes data in a generic data format. This format
+puts data into four categories based on if the observation is a point sample or
+uses an averaging kernel and if it is on an altitude grid or a pressure grid. A
+two letter code after `tg` specifies these options (see table below).
 
 | Abbrev | Data type |
 | :----- | :-------- |
@@ -157,6 +151,21 @@ formats with the xtralite utilitiy
 | tgaz   | Averaging kernel on an altitude grid |
 | tgez   | Sample observation on an altitude grid |
 | tgev   | Sample observation on a pressure grid |
+
+Very many constituent retrievals can be downloaded and transformed into these
+formats with the xtralite utilitiy
+([available here](https://github.com/briardew/xtralite)).
+
+### Averaging kernels
+They are important. Let's give this a try:
+$$
+y^m = y^a + A(x^m - x^a)
+$$
+
+### Adding new observations
+To add a new dataset, you’ll need to add entries in `obsys.rc`, `tgasinfo`,
+`gsiparm.anl`, and `gsidiags.rc`. The easiest approach is to use existing
+entries as a guide.
 
 ## Downloading and compiling CoDAS (optional)
 **This is outdated, keeping here as a reminder to update to git.**
