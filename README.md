@@ -163,7 +163,7 @@ several important steps, we can view the observation opeator as
 $$H(x^m) = y^a + A(x^m - x^a)$$
 Add Connor and Rodgers citations.
 
-### Adding new observations
+## Adding new observations
 To add a new dataset, you’ll need to add entries in `obsys.rc`, `tgasinfo`,
 `gsiparm.anl`, and `gsidiags.rc`. The easiest approach is to use existing
 entries as a guide.
