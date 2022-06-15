@@ -157,13 +157,22 @@ formats with the xtralite utilitiy
 ([available here](https://github.com/briardew/xtralite)).
 
 ### Averaging kernels
-They are important. Let's give $y^m$ this a try:
-$$y^m = y^a + A(x^m - x^a)$$
+Most remote-sensing instruments are sensitive to an integrated path in the
+atmosphere (e.g., from the sun to the surface to the satellite). Skipping over
+several important steps, we can view the observation opeator as
+$$H(x^m) = y^a + A(x^m - x^a)$$
+Add Connor and Rodgers citations.
 
 ### Adding new observations
 To add a new dataset, you’ll need to add entries in `obsys.rc`, `tgasinfo`,
 `gsiparm.anl`, and `gsidiags.rc`. The easiest approach is to use existing
 entries as a guide.
+
+## ODS files
+GSI outputs diagnostics in netCDF files called ODS files because of their
+extension. Make sure to use the `qcexcl` flag: `0` means obs was assimilated,
+`2` means it was rejected for assimilation but still deemed good by the
+data provider, and `-127` means it was not considered for assimilation.
 
 ## Downloading and compiling CoDAS (optional)
 **This is outdated, keeping here as a reminder to update to git.**
