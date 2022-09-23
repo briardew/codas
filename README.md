@@ -168,11 +168,24 @@ To add a new dataset, you’ll need to add entries in `obsys.rc`, `tgasinfo`,
 `gsiparm.anl`, and `gsidiags.rc`. The easiest approach is to use existing
 entries as a guide.
 
-## ODS files
-GSI outputs diagnostics in netCDF files called ODS files because of their
-extension. Make sure to use the `qcexcl` flag: `0` means obs was assimilated,
-`2` means it was rejected for assimilation but still deemed good by the
-data provider, and `-127` means it was not considered for assimilation.
+## Outputs
+Most fields are typical GCM outputs but with assimilation. Assimilation-specific collections are
+
+| `bkg.sfc`  | 2D background fields for the surface (met only)
+| `bkg.eta`  | 3D background fields for the atmosphere (met only)
+| `cbkg.eta` | 3D background fields for the atmosphere (constituents)
+| `ana.eta`  | 3D analysis fields (all analyzed variables from met + tracers)
+
+The `diag_*.bin` files are temporary and used to construct ODS files.
+
+### ODS files
+ODS files are a special output of GSI showing per-sounding values and
+metadata, and are thus not gridded. These files are netCDF and named ODS due
+to their extension (if this makes no sense, you're on the right track).
+Soundings are laid out in two-dimensional blocks that can be reshaped into
+column-major? vectors. Make sure to use the `qcexcl` flag: `0` means obs was
+assimilated, `2` means it was rejected for assimilation but still deemed good
+by the data provider, and `-127` means it was not considered for assimilation.
 
 ## Downloading and compiling CoDAS (optional)
 **This is outdated, keeping here as a reminder to update to git.**
