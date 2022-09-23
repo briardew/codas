@@ -171,10 +171,10 @@ entries as a guide.
 ## Outputs
 Most fields are typical GCM outputs but with assimilation. Assimilation-specific collections are
 
-| `bkg.sfc`  | 2D background fields for the surface (met only)
-| `bkg.eta`  | 3D background fields for the atmosphere (met only)
-| `cbkg.eta` | 3D background fields for the atmosphere (constituents)
-| `ana.eta`  | 3D analysis fields (all analyzed variables from met + tracers)
+| `bkg.sfc`  | 2D background fields for the surface (met only) |
+| `bkg.eta`  | 3D background fields for the atmosphere (met only) |
+| `cbkg.eta` | 3D background fields for the atmosphere (constituents) |
+| `ana.eta`  | 3D analysis fields (all analyzed variables from met + tracers) |
 
 The `diag_*.bin` files are temporary and used to construct ODS files.
 
