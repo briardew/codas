@@ -82,8 +82,8 @@ editing the `~/.GROUProot` file.
     These restarts may have a `codas_background_rst` file that is used to
     remember the background files at the beginning of the analysis window
     needed by the GSI. These files often don’t copy well from one experiment to
-    another. If you’re having problems, deleting the `codas_background_rst`
-    file and restarting is usually a good test.
+    another. If you’re having problems, try deleting the `codas_background_rst`
+    file and restarting.
         
 3. Run CoDAS:
     ```
