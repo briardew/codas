@@ -72,8 +72,8 @@ editing the `~/.GROUProot` file.
 
 2. Copy restarts into your run directory. For example
     ```
-    tar xf /archive/u/bweir/GEOS5.0/m2cc-v1_tags/restarts/Y2009/restarts.e20090827_21z.tar
-    /home/bweir/codas/utils/striprst.sh
+    tar xf /discover/nobackup/bweir/GEOS/runs/m2cc-v1_ana/restarts/restarts.e20180505_21z.tar
+    analyze/bin/striprst.sh
     ```
     You should have restart files with only underscores, e.g.,
     `gocart_internal_rst`, and a `cap_restart` file that is 20090827 210000,
