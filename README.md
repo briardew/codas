@@ -76,7 +76,7 @@ editing the `~/.GROUProot` file.
     analyze/bin/striprst.sh
     ```
     You should have restart files with only underscores, e.g.,
-    `gocart_internal_rst`, and a `cap_restart` file that is 20090827 210000,
+    `gocart_internal_rst`, and a `cap_restart` file that is 20180505 210000,
     corresponding to our restart time.
         
     These restarts may have a `codas_background_rst` file that is used to
