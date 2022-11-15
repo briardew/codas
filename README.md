@@ -14,7 +14,7 @@ The environment variable `$NOBACKUP` is pre-defined on Discover to point to your
 nobackup directory.
 
 1. Define your GEOS directory (`$GEOSDIR`). If you checked out and compiled the
-    model following the instructions below, you can skip this step. Otherwise,
+    model following the instructions below (we need to add that section!), you can skip this step. Otherwise,
     for StratChem experiments, you can use
     ```
     setenv GEOSDIR /discover/nobackup/bweir/GEOS/bw_Icarus-3_2_p9_MEM_20-SLES12
@@ -28,7 +28,7 @@ nobackup directory.
     CoDAS hooks for applying increments).
 
 2. Define the **reference** run directory (`$CLONEDIR`). Your run will be a
-    clone of the run in this directory. For example, for StratChem experiments,
+    clone (we need to explain what cloning is - does it mean to copy?  If so I would recommend adding sentence explaing that cloning is bascially a copy command.) of the run in this directory. For example, for StratChem experiments,
     use
     ```
     setenv CLONEDIR /discover/nobackup/bweir/GEOS/runs/sage_ana
@@ -50,7 +50,7 @@ nobackup directory.
     setenv EXPID codas001
     ```
 
-5. Run the CoDAS setup command:
+5. Run the CoDAS setup command (this command will copy CoDAS into the above-defined path):
     ```
     cd $GEOSDIR/GEOSagcm/src/Applications/GEOSgcm_App
     ./codas_setup --clone $CLONEDIR --root $EXPROOT --expid $EXPID --nocvs
@@ -61,7 +61,7 @@ the actual directory, or if `$CLONEDIR` is not the same run directory
 referenced in the `gcm_run.j` script. Still looking into this.
 
 The `codas_setup` utility places several hidden files in your home directory.
-This will hopefully be fixed, but, in the meantime, you can change the GID by
+This will hopefully be fixed, but, in the meantime, you can change the GID (GID is what?) by
 editing the `~/.GROUProot` file.
 
 ## Running CoDAS
@@ -83,7 +83,7 @@ editing the `~/.GROUProot` file.
     remember the background files at the beginning of the analysis window
     needed by the GSI. These files often don’t copy well from one experiment to
     another. If you’re having problems, try deleting the `codas_background_rst`
-    file and restarting.
+    file and restarting. (From my expereince when restarting an experiment you must always delete 'codas_background_rst'.)
         
 3. Run CoDAS:
     ```
