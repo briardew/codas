@@ -1,5 +1,5 @@
 # CoDAS 
-TEST! This document covers the basics of downloading, compiling, running, and
+This document covers the basics of downloading, compiling, running, and
 analyzing results from the Constituent Data Assimilation (CoDAS) applied to the
 Goddard Earth Observing System (GEOS) on the NASA Center for Climate Simulation
 (NCCS) Discover supercomputer. You’ll need executables for the GEOS General
