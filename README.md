@@ -36,8 +36,10 @@ nobackup directory.
     
     For carbon experiments, use
     ```
-    setenv CLONEDIR /discover/nobackup/bweir/GEOS/runs/m2cc-v1_ana
+    setenv CLONEDIR /discover/nobackup/projects/gmao/geos_carb_dev/bweir/runs/m2cc-v1_ana
     ```
+    Note: The variable `$CLONEDIR` must point to the directory referenced in the `codas_run.j`
+    script, not a symbolic link.
 
 3. Define your personal run root directory (`$EXPROOT`). This can be any
     writable directory, e.g.,
@@ -55,10 +57,6 @@ nobackup directory.
     cd $GEOSDIR/GEOSagcm/src/Applications/GEOSgcm_App
     ./codas_setup --clone $CLONEDIR --root $EXPROOT --expid $EXPID --nocvs
     ```
-
-Notes: This can have issues if `$CLONEDIR` points to a symbolic link instead of
-the actual directory, or if `$CLONEDIR` is not the same run directory
-referenced in the `gcm_run.j` script. Still looking into this.
 
 The `codas_setup` utility places several hidden files in your home directory.
 This will hopefully be fixed, but, in the meantime, you can change the GID (GID is what?) by
