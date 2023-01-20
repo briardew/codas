@@ -62,6 +62,10 @@ The `codas_setup` utility places several hidden files in your home directory.
 This will hopefully be fixed, but, in the meantime, you can change the GID (GID is what?) by
 editing the `~/.GROUProot` file.
 
+**The cloning utility really doesn't like variables used in the definitions of `$HOMDIR` and
+`$EXPDIR` in `codas_run.j`. Thinking about solutions to this, but there's only so much
+inference the cloning utility can do.**
+
 ## Running CoDAS
 1. Go to your run directory:
     ```
