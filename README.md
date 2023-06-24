@@ -14,21 +14,13 @@ The environment variable `$NOBACKUP` is pre-defined on Discover to point to your
 nobackup directory.
 
 1. Define your GEOS directory (`$GEOSDIR`). If you checked out and compiled the
-    model following the instructions below (we need to add that section!), you can skip this step. Otherwise,
-    for StratChem experiments, you can use
+    model following the instructions below (we need to add that section!), you can skip this step.
     ```
-    setenv GEOSDIR /discover/nobackup/bweir/GEOS/bw_Icarus-3_2_p9_MEM_20-SLES12
+    setenv GEOSDIR /discover/nobackup/bweir/GEOS/GEOSadas-5_30_0
     ```
- 
-    For carbon experiments, you can use
-    ```
-    setenv GEOSDIR /discover/nobackup/bweir/GEOS/bw_Heracles-5_4_p3_SLES12
-    ```
-    or any other existing code directory you have (must have the appropriate
-    CoDAS hooks for applying increments).
 
 2. Define the **reference** run directory (`$CLONEDIR`). Your run will be a
-    clone (we need to explain what cloning is - does it mean to copy?  If so I would recommend adding sentence explaing that cloning is bascially a copy command.) of the run in this directory. For example, for StratChem experiments,
+    copy (i.e., clone) of the run in this directory. For example, for StratChem experiments,
     use
     ```
     setenv CLONEDIR /discover/nobackup/bweir/GEOS/runs/sage_ana
@@ -36,7 +28,7 @@ nobackup directory.
     
     For carbon experiments, use
     ```
-    setenv CLONEDIR /discover/nobackup/projects/gmao/geos_carb_dev/bweir/runs/m2cc-v1_ana
+    setenv CLONEDIR /discover/nobackup/projects/gmao/geos_carb_dev/bweir/runs/carbon-ng_ana
     ```
     Note: The variable `$CLONEDIR` must point to the directory referenced in the `codas_run.j`
     script, not a symbolic link.
@@ -52,7 +44,7 @@ nobackup directory.
     setenv EXPID codas001
     ```
 
-5. Run the CoDAS setup command (this command will copy CoDAS into the above-defined path):
+6. Run the CoDAS setup command (this command will copy CoDAS into the above-defined path):
     ```
     cd $GEOSDIR/GEOSagcm/src/Applications/GEOSgcm_App
     ./codas_setup --clone $CLONEDIR --root $EXPROOT --expid $EXPID --nocvs
