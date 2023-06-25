@@ -46,8 +46,8 @@ nobackup directory.
 
 6. Run the CoDAS setup command (this command will copy CoDAS into the above-defined path):
     ```
-    cd $GEOSDIR/GEOSagcm/src/Applications/GEOSgcm_App
-    ./codas_setup --clone $CLONEDIR --root $EXPROOT --expid $EXPID --nocvs
+    cd $GEOSDIR/install/bin
+    ./codas_setup --clone $CLONEDIR --root $EXPROOT --expid $EXPID
     ```
 
 The `codas_setup` utility places several hidden files in your home directory.
