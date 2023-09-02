@@ -16,7 +16,7 @@ nobackup directory.
 1. Define your GEOS directory (`$GEOSDIR`). If you checked out and compiled the
     model following the instructions below (we need to add that section!), you can skip this step.
     ```
-    setenv GEOSDIR /discover/nobackup/bweir/GEOS/GEOSadas-5_30_0
+    setenv GEOSDIR /discover/nobackup/bweir/GEOS/GEOSadas-5_30_0/GEOSadas
     ```
 
 2. Define the **reference** run directory (`$CLONEDIR`). Your run will be a
