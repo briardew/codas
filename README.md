@@ -20,15 +20,9 @@ nobackup directory.
     ```
 
 2. Define the **reference** run directory (`$CLONEDIR`). Your run will be a
-    copy (i.e., clone) of the run in this directory. For example, for StratChem experiments,
-    use
+    copy (i.e., clone) of the run in this directory. For example, for carbon experiments, use
     ```
-    setenv CLONEDIR /discover/nobackup/bweir/GEOS/runs/sage_ana
-    ```
-    
-    For carbon experiments, use
-    ```
-    setenv CLONEDIR /discover/nobackup/projects/gmao/geos_carb_dev/bweir/runs/carbon-ng_ana
+    setenv CLONEDIR /discover/nobackup/bweir/GEOS/runs/carbon-ng_ana
     ```
     Note: The variable `$CLONEDIR` must point to the directory referenced in the `codas_run.j`
     script, not a symbolic link.
@@ -66,7 +60,7 @@ inference the cloning utility can do.**
 
 2. Copy restarts into your run directory. For example
     ```
-    tar xf /discover/nobackup/bweir/GEOS/runs/m2cc-v1_ana/restarts/restarts.e20180505_21z.tar
+    tar xf /discover/nobackup/bweir/GEOS/runs/carbon-ng_ana/restarts/restarts.e20180505_21z.tar
     analyze/bin/striprst.sh
     ```
     You should have restart files with only underscores, e.g.,
