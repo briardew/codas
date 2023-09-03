@@ -16,6 +16,7 @@ a ship in a bottle, protractor, and a picture of Edith Piaf.
 4. [Data types](#data-types)
 5. [Adding new observations](#adding-new-observations)
 6. [Outputs](#outputs)
+7. [Downloading and compiling CoDAS](#downloading-and-compiling-codas)
 
 ## CoDAS Quickstart on Discover
 The environment variable `$NOBACKUP` is pre-defined on Discover to point to your
@@ -187,7 +188,10 @@ column-major? vectors. Make sure to use the `qcexcl` flag: `0` means obs was
 assimilated, `2` means it was rejected for assimilation but still deemed good
 by the data provider, and `-127` means it was not considered for assimilation.
 
-## Downloading and compiling CoDAS (optional)
+## Downloading and compiling CoDAS
+
+**This is optional on Discover as compiled executables are already available.**
+
 **This is outdated, keeping here as a reminder to update to git.**
 
 If you wish to modify the CoDAS code, you’ll need to download (check out) and
@@ -219,7 +223,7 @@ cd GEOSagcm/src
 ./parallel_build.csh
 ```
 
-# Any questions?
+## Any questions?
 
 Future improvements
 * Auto-generate `gsidiags.rc` (should be “easy”)
