@@ -146,10 +146,10 @@ two letter code after `tg` specifies these options (see table below).
 
 | Abbrev | Data type |
 | :----- | :-------- |
-| tgav   | Averaging kernel on a pressure grid |
+| tgez   | Point sample on an altitude grid |
+| tgev   | Point sample on a pressure grid |
 | tgaz   | Averaging kernel on an altitude grid |
-| tgez   | Sample observation on an altitude grid |
-| tgev   | Sample observation on a pressure grid |
+| tgav   | Averaging kernel on a pressure grid |
 
 Very many constituent retrievals can be downloaded and transformed into these
 formats with the xtralite utilitiy
