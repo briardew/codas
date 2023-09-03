@@ -73,10 +73,10 @@ The following assumes you've defined the environment variables `$EXPROOT`, `$EXP
     cd $EXPROOT/$EXPID
     ```
 
-2. Copy restarts into your run directory. For example
+2. Copy restarts into your run directory. For example,
     ```
-    tar xf /discover/nobackup/bweir/GEOS/runs/carbon-ng_ana/restarts/restarts.e20180505_21z.tar
-    analyze/bin/striprst.sh
+    tar xf $CLONEDIR/restarts/restarts.e20180505_21z.tar
+    ./analyze/bin/striprst.sh
     ```
     You should have restart files with only underscores, e.g.,
     `gocart_internal_rst`, and a `cap_restart` file that is 20180505 210000,
@@ -84,11 +84,11 @@ The following assumes you've defined the environment variables `$EXPROOT`, `$EXP
         
     These restarts may have a `codas_background_rst` file that is used to
     remember the background files at the beginning of the analysis window
-    needed by the GSI. These files often don’t copy well from one experiment to
-    another. If you’re having problems, try deleting the `codas_background_rst`
-    file and restarting. (From my expereince when restarting an experiment you must always delete 'codas_background_rst'.)
+    needed by the GSI. These files sometimes don’t copy well from one experiment to
+    another. If you’re having problems, this can be checked by temporarily renaming
+    the `codas_background_rst` file and restarting.
         
-3. Run CoDAS:
+4. Run CoDAS:
     ```
     sbatch ./codas_run.j
     ```
@@ -96,8 +96,8 @@ The following assumes you've defined the environment variables `$EXPROOT`, `$EXP
     `codas_setup` utility simply copies what’s in the `~/.GROUProot` file.
 
 ## Configuring CoDAS
-The only difference between a CoDAS run directory and a GCM run directory is
-the `codas_run.j` job script, the `GSIsa.x` executable, and a directory
+The only difference between a CoDAS run directory and a GEOS GCM run directory
+is the `codas_run.j` job script, the `GSIsa.x` executable, and a directory
 `analyze` containing configuration files and utilities.
 
 The basic configuration of CoDAS is laid out in `analyze/codas.rc`, which
