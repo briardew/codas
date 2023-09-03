@@ -201,8 +201,9 @@ by the data provider, and `-127` means it was not considered for assimilation.
 
 **This is outdated, keeping here as a reminder to update to git.**
 
-If you wish to modify the CoDAS code, you’ll need to download (check out) and
-compile a given version (tag) of the GSI and optionally a separate GCM.
+If you wish to modify the CoDAS code or run on a system other than Discover,
+you’ll need to download (clone) and compile a given version of the GSI
+and optionally a separate GCM.
 **You’ll only need to do this once**. If you’ve never used git/CVS before,
 you’ll need to follow the steps in the GEOS Quick Start Guide (follow this link
 for Heracles 5.4). The directions below should work, but use an outdated CVS
