@@ -1,9 +1,9 @@
 # CoDAS 
 This document covers the basics of downloading, compiling, running, and
-analyzing results from the Constituent Data Assimilation (CoDAS) applied within
-NASA's Goddard Earth Observing System (GEOS). To run CoDAS, you’ll need executables
-for the GEOS General Circulation Model (GCM) and Gridpoint Statistical Interpolation (GSI).
-These are provided for the NASA Center for Climate Simulation (NCCS) Discover supercomputer
+analyzing results from the Constituent Data Assimilation System (CoDAS) within NASA's
+Goddard Earth Observing System (GEOS). To run CoDAS, you’ll need executables for the GEOS
+General Circulation Model (GCM) and Gridpoint Statistical Interpolation (GSI). These are provided
+for the NASA Center for Climate Simulation (NCCS) Discover supercomputer
 in [the Quickstart](#quickstart-on-discover), but can be compiled on other systems from
 the [GEOS Atmospheric Data Assimilation (ADAS) fixture](https://github.com/GEOS-ESM/GEOSadas)
 source code. 
