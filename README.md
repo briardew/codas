@@ -196,7 +196,8 @@ by the data provider, and `-127` means it was not considered for assimilation.
 
 ## Downloading and compiling CoDAS
 
-**This is optional on Discover as compiled executables are already available.**
+**This is optional on Discover as compiled executables are already available
+(see [here](#quickstart-on-discover)).**
 
 **This is outdated, keeping here as a reminder to update to git.**
 
