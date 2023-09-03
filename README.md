@@ -5,7 +5,8 @@ NASA's Goddard Earth Observing System (GEOS). To run CoDAS, you’ll need execut
 for the GEOS General Circulation Model (GCM) and Gridpoint Statistical Interpolation (GSI).
 These are provided for the NASA Center for Climate Simulation (NCCS) Discover supercomputer
 in [the Quickstart](#quickstart-on-discover), but can be compiled on other systems from
-the [GEOS Atmospheric Data Assimilation (ADAS) fixture source code](https://github.com/GEOS-ESM/GEOSadas). 
+the [GEOS Atmospheric Data Assimilation (ADAS) fixture](https://github.com/GEOS-ESM/GEOSadas)
+source code. 
 
 ## Contents
 1. [Quickstart on Discover](#quickstart-on-discover)
