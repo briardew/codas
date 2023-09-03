@@ -10,14 +10,14 @@ Assimilation (ADAS) fixture
 a ship in a bottle, protractor, and a picture of Edith Piaf.
 
 ## Contents
-1. [CoDAS quickstart on Discover](#codas-quickstart-on-discover)
+1. [Quickstart on Discover](#quickstart-on-discover)
 2. [Configuring CoDAS](#configuring-codas)
 3. [Data types](#data-types)
 4. [Adding new observations](#adding-new-observations)
 5. [Outputs](#outputs)
 6. [Downloading and compiling CoDAS](#downloading-and-compiling-codas)
 
-## CoDAS Quickstart on Discover
+## Quickstart on Discover
 The environment variable `$NOBACKUP` is pre-defined on Discover to point to your
 nobackup directory. Right now, this document assumes you are using a C shell
 variant, which is the default on Discover. It will be transitioned to Bash-like
