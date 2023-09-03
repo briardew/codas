@@ -9,7 +9,7 @@ Assimilation (ADAS) fixture
 ([available here](https://github.com/GEOS-ESM/GEOSadas)),
 a ship in a bottle, protractor, and a picture of Edith Piaf.
 
-## Setting up a CoDAS run/experiment directory
+## Setting up a CoDAS run directory on Discover
 The environment variable `$NOBACKUP` is pre-defined on Discover to point to your
 nobackup directory. Right now, this document assumes you are using a C shell
 variant, which is the default on Discover. It will be transitioned to Bash-like
