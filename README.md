@@ -159,8 +159,10 @@ formats with the xtralite utilitiy
 Most remote-sensing instruments are sensitive to an integrated path in the
 atmosphere (e.g., from the sun to the surface to the satellite). Skipping over
 several important steps, we can view the observation opeator as
-$$H(x^m) = y^a + A(x^m - x^a)$$
-Add Connor and Rodgers citations.
+$$H(x) = y_0 + A(x - x_0),$$
+where $x_0$ and $y_0$ are the a priori profile and observation values.
+
+Add Rodgers and Connor and other citations.
 
 ## Adding new observations
 To add a new dataset, you’ll need to add entries in `obsys.rc`, `tgasinfo`,
