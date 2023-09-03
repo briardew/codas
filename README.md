@@ -86,7 +86,8 @@ The following assumes you've defined the environment variables `$EXPROOT`, `$EXP
     remember the background files at the beginning of the analysis window
     needed by the GSI. These files sometimes don’t copy well from one experiment to
     another. If you’re having problems, this can be checked by temporarily renaming
-    the `codas_background_rst` file and restarting.
+    the `codas_background_rst` file and restarting. This restart is necessary
+    for zero-diff results.
         
 4. Run CoDAS:
     ```
