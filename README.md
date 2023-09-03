@@ -11,7 +11,9 @@ a ship in a bottle, protractor, and a picture of Edith Piaf.
 
 ## Setting up a CoDAS run/experiment directory
 The environment variable `$NOBACKUP` is pre-defined on Discover to point to your
-nobackup directory.
+nobackup directory. Right now, this document assumes you are using a C shell
+variant, which is the default on Discover. It will be transitioned to Bash-like
+shells in the near future.
 
 1. Define your GEOS directory (`$GEOSDIR`). If you checked out and compiled the
     model following the instructions below (we need to add that section!), you can skip this step.
