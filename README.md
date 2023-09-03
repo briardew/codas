@@ -11,18 +11,19 @@ a ship in a bottle, protractor, and a picture of Edith Piaf.
 
 ## Contents
 1. [CoDAS quickstart on Discover](#codas-quickstart-on-discover)
-2. [Running CoDAS](#running-codas)
-3. [Configuring CoDAS](#configuring-codas)
-4. [Data types](#data-types)
-5. [Adding new observations](#adding-new-observations)
-6. [Outputs](#outputs)
-7. [Downloading and compiling CoDAS](#downloading-and-compiling-codas)
+2. [Configuring CoDAS](#configuring-codas)
+3. [Data types](#data-types)
+4. [Adding new observations](#adding-new-observations)
+5. [Outputs](#outputs)
+6. [Downloading and compiling CoDAS](#downloading-and-compiling-codas)
 
 ## CoDAS Quickstart on Discover
 The environment variable `$NOBACKUP` is pre-defined on Discover to point to your
 nobackup directory. Right now, this document assumes you are using a C shell
 variant, which is the default on Discover. It will be transitioned to Bash-like
 shells in the near future.
+
+### Cloning an existing run
 
 1. Define your GEOS directory (`$GEOSDIR`). If you checked out and compiled the
     model following the instructions below (we need to add that section!), you can skip this step.
@@ -63,7 +64,10 @@ editing the `~/.GROUProot` file.
 `$EXPDIR` in `codas_run.j`. Thinking about solutions to this, but there's only so much
 inference the cloning utility can do.**
 
-## Running CoDAS
+### Running CoDAS
+The following assumes you've defined the environment variables `$EXPROOT`, `$EXPID`, and
+`$CLONEDIR` as in [the cloning guide](#cloning-an-existing-run).
+
 1. Go to your run directory:
     ```
     cd $EXPROOT/$EXPID
