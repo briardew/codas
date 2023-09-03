@@ -6,7 +6,10 @@ General Circulation Model (GCM) and Gridpoint Statistical Interpolation (GSI). T
 for the NASA Center for Climate Simulation (NCCS) Discover supercomputer
 in [the Quickstart](#quickstart-on-discover), but can be compiled on other systems from
 the [GEOS Atmospheric Data Assimilation (ADAS) fixture](https://github.com/GEOS-ESM/GEOSadas)
-source code. 
+source code.
+
+Much of the setup and run scripts of CoDAS a written in C shell. This is due to its GEOS and NCCS
+heritage. We are in the process of converting the existing C shell code to bash and Python code.
 
 ## Contents
 1. [Quickstart on Discover](#quickstart-on-discover)
