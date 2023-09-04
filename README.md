@@ -28,7 +28,7 @@ shells in the near future.
 ### Cloning an existing run
 
 1. Define your GEOS directory (`$GEOSDIR`). If you checked out and compiled the
-    model following the instructions below (we need to add that section!), you can skip this step.
+    model following the instructions below, you can skip this step.
     ```
     setenv GEOSDIR /discover/nobackup/bweir/GEOS/GEOSadas-5_30_0/GEOSadas
     ```
