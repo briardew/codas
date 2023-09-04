@@ -8,9 +8,8 @@ in [the Quickstart](#quickstart-on-discover), but can be compiled on other syste
 the [GEOS Atmospheric Data Assimilation (ADAS) fixture](https://github.com/GEOS-ESM/GEOSadas)
 source code.
 
-Much of the setup and run scripts of CoDAS are written in C shell. This is due to its GEOS and
-NCCS heritage. We are in the process of converting the existing C shell code to bash and Python
-code.
+Much of the setup and run scripts of CoDAS are written in C shell due to its GEOS and
+NCCS heritage. This code is currently being converted to bash and Python.
 
 ## Contents
 1. [Quickstart on Discover](#quickstart-on-discover)
