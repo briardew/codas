@@ -29,7 +29,7 @@ shells in the near future.
 
 1. Define your GEOS directory (`$GEOSDIR`). If you checked out and compiled the
     model following the [instructions below](#downloading-and-compiling-codas),
-    this should point to that directory instead.
+    `$GEOSDIR` should point to that directory instead.
     ```
     setenv GEOSDIR /discover/nobackup/bweir/GEOS/GEOSadas-5_30_0/GEOSadas
     ```
