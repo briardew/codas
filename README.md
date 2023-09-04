@@ -28,12 +28,13 @@ shells in the near future.
 ### Cloning an existing run
 
 1. Define your GEOS directory (`$GEOSDIR`). If you checked out and compiled the
-    model following the instructions below, you can skip this step.
+    model following the [instructions below](#downloading-and-compiling-codas),
+    this should point to that directory instead.
     ```
     setenv GEOSDIR /discover/nobackup/bweir/GEOS/GEOSadas-5_30_0/GEOSadas
     ```
 
-2. Define the **reference** run directory (`$CLONEDIR`). Your run will be a
+3. Define the **reference** run directory (`$CLONEDIR`). Your run will be a
     copy (i.e., clone) of the run in this directory. For example, for carbon experiments, use
     ```
     setenv CLONEDIR /discover/nobackup/bweir/GEOS/runs/carbon-ng_ana
@@ -41,13 +42,13 @@ shells in the near future.
     Note: The variable `$CLONEDIR` must point to the directory referenced in the `codas_run.j`
     script, not a symbolic link.
 
-3. Define your personal run root directory (`$EXPROOT`). This can be any
+4. Define your personal run root directory (`$EXPROOT`). This can be any
     writable directory, e.g.,
     ```
     setenv EXPROOT $NOBACKUP/GEOS/runs
     ```
 
-4. Define your experiment (`$EXPID`). This can be anything, e.g.,
+5. Define your experiment (`$EXPID`). This can be anything, e.g.,
     ```
     setenv EXPID codas001
     ```
